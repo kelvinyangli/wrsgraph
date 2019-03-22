@@ -12,10 +12,13 @@ rand_bounded_deg_graph_aux(n, delta)
 \item{delta}{The maximum degree in the graph.}
 }
 \description{
-This is an auxiliary function of the rand_bounded_deg_graph() function. It may return an error due to
-non-existence of a consistent DAG for a sampled degree sequence. It first generates a random
-degree sequence based on the maximum degree, then use the igraph::sample_degseq(out.deg, method = "vl")
-function to generate a connected undirected random graph consistents with the sampled degree sequence.
+This is an auxiliary function of the rand_bounded_deg_graph() function.
+It may return an error due to non-existence of a consistent undirected graph
+for a sampled degree sequence.
+It first generates a random degree sequence based on the maximum degree,
+then use the igraph::sample_degseq(out.deg, method = "vl") function to
+generate a connected undirected random graph consistents with the
+sampled degree sequence.
 }
 \keyword{bounded}
 \keyword{degree}
