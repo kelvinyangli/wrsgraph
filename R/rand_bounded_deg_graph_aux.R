@@ -21,7 +21,7 @@ rand_bounded_deg_graph_aux = function(n, delta) {
 
   # randomly generate an undirected graph with the given deg seq
   # the "vl" method guarantees a connected graph
-  g = sample_degseq(degSeq, method = "vl")
+  g = igraph::sample_degseq(degSeq, method = "vl")
   m = as.matrix(as_adjacency_matrix(g)) # convert igraph graph into adjacency matrix
   varNames = paste0("V", 1:n)
   dimnames(m) = list(varNames, varNames)
